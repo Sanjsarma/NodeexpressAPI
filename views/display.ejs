@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Display page</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th> Roll number </th>
+                <th> Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(studentData.length!=0){
+                var i=1;
+                studentData.forEach(function(data){
+                    %>
+                
+            <tr>
+                <td><%=data.rno%></td>
+            <td><%=data.name%></td>
+        </tr>
+        <% i++; })  %>
+        <% } else{ %>
+        <tr>
+            <td> Data not found </td>
+        </tr>
+    <%} %>
+        </tbody>
+    </table>
+</body>
